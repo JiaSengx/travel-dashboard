@@ -1,10 +1,9 @@
 import { Routes } from '@angular/router';
-import { Trip } from './trip';
 
 export const TRIP_ROUTES: Routes = [
   {
     path: '',
-    component: Trip,
+    loadComponent: () => import('./trip').then(c => c.Trip),
     children: [
       {
         path: '',
