@@ -1,0 +1,35 @@
+<article class="container">
+  <ng-container [ngTemplateOutlet]="$isCollapse() ? collapse : expand"></ng-container>
+
+  <section class="logout-container">logout</section>
+</article>
+
+<ng-template #expand>
+  <section class="logo-container">
+    <img src="assets/logo.png" alt="logo" class="logo" />
+    <p class="logo-text">Touristo</p>
+    <fa-icon [icon]="$toggleIcon()" (click)="onToggle()"></fa-icon>
+  </section>
+
+  <ul>
+    <li>
+      <p>asd</p>
+      <p>aasdasdasdasd</p>
+    </li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+</ng-template>
+
+<ng-template #collapse>
+  <section class="logo-container">
+    <img src="assets/logo.png" alt="logo" class="logo" />
+    <fa-icon [icon]="$toggleIcon()" (click)="onToggle()"></fa-icon>
+  </section>
+
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+</ng-template>

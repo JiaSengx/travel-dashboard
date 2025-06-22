@@ -1,2 +1,7 @@
-@forward 'base';
-@forward 'colors';
+// style
+@forward './style/base';
+@forward './style/colors';
+
+// function
+@forward './functions/space';
+@forward './functions/font-size';

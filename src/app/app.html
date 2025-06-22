@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<article class="shell" [class.--collapse]="$isSidebarCollapse()">
+  <section class="navigation-container">
+    <app-sidebar
+      class="navigation"
+      (toggle)="onToggleSidebar()"
+      [isCollapse]="$isSidebarCollapse()"
+    ></app-sidebar>
+  </section>
+
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</article>

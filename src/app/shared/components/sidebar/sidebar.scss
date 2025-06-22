@@ -1,0 +1,30 @@
+@use 'index' as *;
+
+.container {
+  width: 100%;
+  padding: space(2);
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: space(3);
+}
+
+.logo {
+  width: 50px;
+}
+
+.logo-text {
+  font-size: font-size(3);
+  font-weight: bold;
+}
+
+.logout-container {
+  position: fixed;
+  bottom: 0;
+}
+
+
+
