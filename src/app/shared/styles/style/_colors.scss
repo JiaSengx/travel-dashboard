@@ -1,2 +1,43 @@
-$text: red;
-$title: green;
+$colors: (
+  primary: #4f46e5,
+  primary-light: #6366f1,
+  primary-dark: #3730a3,
+  secondary: #f59e0b,
+  secondary-light: #fbbf24,
+  secondary-dark: #b45309,
+  grey: #6b7280,
+  grey-light: #d1d5db,
+  grey-dark: #374151,
+  red: #ef4444,
+  red-light: #fca5a5,
+  red-dark: #b91c1c,
+  blue: #3b82f6,
+  blue-light: #93c5fd,
+  blue-dark: #1d4ed8,
+  yellow: #eab308,
+  yellow-light: #fde68a,
+  yellow-dark: #ca8a04,
+  green: #10b981,
+  green-light: #6ee7b7,
+  green-dark: #047857,
+  orange: #f97316,
+  orange-light: #fdba74,
+  orange-dark: #c2410c,
+  purple: #8b5cf6,
+  purple-light: #c4b5fd,
+  purple-dark: #6d28d9,
+  success: #10b981,
+  info: #3b82f6,
+  warning: #f97316,
+  danger: #ef4444,
+  white: #ffffff,
+  black: #000000
+);
+
+@function colors($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @return $key;
+}

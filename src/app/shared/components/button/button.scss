@@ -1,0 +1,22 @@
+@use 'index' as *;
+
+.wrapper {
+  display: inline-block;
+  padding: space(1);
+  transition: background-color 0.3s ease;
+  border-radius: 0.75rem;
+
+  &:hover {
+    background-color: colors(grey-light);
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: colors(grey-light);
+  color: colors(primary);
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
